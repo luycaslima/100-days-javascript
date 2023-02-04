@@ -3,28 +3,42 @@ let counter = 0
 const counterText = document.querySelector("span");
 
 //Get buttons
-//could use querSelectorAll(".btn") to store all in one variable and compare by classes wich button was clicked
-//const btns = document.querySelectorAll(".btn")
+const btns = document.querySelector(".button-container")
 
-const decreaseButton = document.getElementById("decrease")
+function updateCounter() {
+    counterText.textContent = counter
+}
+
+btns.addEventListener('click', (e) => {
+    if (e.target.id === "increase" ) {
+        counter++
+        updateCounter()
+    } else if (e.target.id === "decrease" ) {
+        counter--
+        updateCounter()
+    } else if (e.target.id === "reset") {
+        counter = 0
+        updateCounter()
+    }
+})
+
+
+/*const decreaseButton = document.getElementById("decrease")
 const resetButton = document.getElementById("reset")
 const increaseButton = document.getElementById("increase")
 
-function updateCounter(value) {
-    counterText.textContent = value
-}
 
 increaseButton.addEventListener('click', () => {
     counter++
-    updateCounter(counter)
+    updateCounter()
 })
 
 resetButton.addEventListener('click', () => {
     counter = 0
-    updateCounter(counter)
+    updateCounter()
 })
 
 decreaseButton.addEventListener('click', () => {
     counter--
-    updateCounter(counter)
-})
+    updateCounter()
+})*/

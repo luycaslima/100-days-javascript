@@ -27,12 +27,9 @@ main{
   display: flex;
 }
 
-img {
-  width: 100%;
-}
 
-h1 {
-  font-size: 4rem;
+h3 {
+  font-size: 2rem;
   color: var(--black);
 }
 
@@ -46,10 +43,26 @@ h1 {
   align-items: center;
 }
 
+.input-container{
+    display: flex;
+    gap: .5rem;
+    margin: 1rem 0;
+}
+
+input{
+    width: 7rem;
+    padding: 0 1rem;
+}
+
+.input-container > label{
+    font-size: 1rem;
+}
+
+
 .container > span{
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 1rem auto;
-  color: var(--dark-grey);
+  color: var(--dark-blue);
 }
 
 .button-container{
